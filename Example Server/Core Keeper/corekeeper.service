@@ -1,0 +1,13 @@
+[Unit]
+Description=Core Keeper Server
+After=network.target
+
+[Service]
+User=corekeeper
+WorkingDirectory=/home/corekeeper/
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/corekeeper/ +login anonymous +app_update 1007 validate +app_update 1963720 validate +quit
+ExecStart=/home/corekeeper/_launch.sh
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/abioticfactor/auto_shutdown.sh > /home/abioticfactor/auto_shutdown.log 2>&1

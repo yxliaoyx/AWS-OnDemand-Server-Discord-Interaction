@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/corekeeper/auto_shutdown.sh > /home/corekeeper/auto_shutdown.log 2>&1

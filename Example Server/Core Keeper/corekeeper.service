@@ -6,7 +6,7 @@ After=network.target
 User=corekeeper
 WorkingDirectory=/home/corekeeper/
 ExecStartPre=/usr/games/steamcmd +force_install_dir /home/corekeeper/ +login anonymous +app_update 1007 validate +app_update 1963720 validate +quit
-ExecStart=/home/corekeeper/_launch.sh
+ExecStart=/home/corekeeper/_launch.sh -port 27015
 KillMode=process
 
 [Install]

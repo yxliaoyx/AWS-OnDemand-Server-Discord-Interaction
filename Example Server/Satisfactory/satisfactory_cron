@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/satisfactory/auto_shutdown.sh > /home/satisfactory/auto_shutdown.log 2>&1

@@ -1,0 +1,13 @@
+[Unit]
+Description=Satisfactory Server
+After=network.target
+
+[Service]
+User=satisfactory
+WorkingDirectory=/home/satisfactory/
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/satisfactory/ +login anonymous +app_update 1690800 validate +quit
+ExecStart=/home/satisfactory/FactoryServer.sh -Port=7777
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

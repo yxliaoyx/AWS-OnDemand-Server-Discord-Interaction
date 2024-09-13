@@ -1,5 +1,7 @@
 # AWS-OnDemand-Server-Discord-Interaction
 
+![AWS-OnDemand-Server-Discord-Interaction](/AWS-OnDemand-Server-Discord-Interaction.png)
+
 AWS-based solution for managing an on-demand server through Discord interactions.
 
 This project is inspired by [MineCloud](https://github.com/VeriorPies/MineCloud).

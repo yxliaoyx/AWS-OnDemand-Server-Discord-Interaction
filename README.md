@@ -77,4 +77,5 @@ Discord commands:
 * `/stop` - Stop the server
 
 ## Credits
+
 This project is inspired by [MineCloud](https://github.com/VeriorPies/MineCloud).

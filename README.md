@@ -4,8 +4,6 @@
 
 AWS-based solution for managing an on-demand server through Discord interactions.
 
-This project is inspired by [MineCloud](https://github.com/VeriorPies/MineCloud).
-
 ## Prerequisites
 
 1. [AWS Account](https://aws.amazon.com/)
@@ -77,3 +75,7 @@ Discord commands:
 
 * `/start` - Start the server
 * `/stop` - Stop the server
+
+## Credits
+
+This project is inspired by [MineCloud](https://github.com/VeriorPies/MineCloud).

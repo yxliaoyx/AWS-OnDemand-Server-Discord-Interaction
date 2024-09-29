@@ -1,75 +1,66 @@
 {
   "Version": "2012-10-17",
   "Statement": [
-    {
-      "Sid": "StsAccess",
-      "Effect": "Allow",
-      "Action": [
-        "sts:AssumeRole",
-        "iam:*Role*"
-      ],
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Action": [
-        "cloudformation:*"
-      ],
-      "Resource": [
-        "*"
-      ],
-      "Effect": "Allow"
-    },
-    {
-      "Sid": "S3Access",
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "ECRAccess",
-      "Effect": "Allow",
-      "Action": [
-        "ecr:SetRepositoryPolicy",
-        "ecr:GetLifecyclePolicy",
-        "ecr:PutImageScanningConfiguration",
-        "ecr:DescribeRepositories",
-        "ecr:CreateRepository",
-        "ecr:DeleteRepository"
-      ],
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ssm:GetParameter*",
-        "ssm:PutParameter*",
-        "ssm:DeleteParameter*"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:PassRole"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "sts:AssumeRole"
-      ],
-      "Resource": [
-        "arn:aws:iam::*:role/cdk-*"
-      ]
-    }
+      {
+          "Sid": "StsAccess",
+          "Effect": "Allow",
+          "Action": [
+              "sts:AssumeRole",
+              "iam:*Role*"
+          ],
+          "Resource": [
+              "arn:aws:iam::*:role/cdk-*"
+          ]
+      },
+      {
+          "Action": [
+              "cloudformation:*"
+          ],
+          "Resource": [
+              "arn:aws:cloudformation:*:*:stack/CDKToolkit/*"
+          ],
+          "Effect": "Allow"
+      },
+      {
+          "Sid": "S3Access",
+          "Effect": "Allow",
+          "Action": [
+              "s3:*"
+          ],
+          "Resource": [
+              "*"
+          ]
+      },
+      {
+          "Sid": "ECRAccess",
+          "Effect": "Allow",
+          "Action": [
+              "ecr:SetRepositoryPolicy",
+              "ecr:GetLifecyclePolicy",
+              "ecr:PutImageScanningConfiguration",
+              "ecr:DescribeRepositories",
+              "ecr:CreateRepository",
+              "ecr:DeleteRepository"
+          ],
+          "Resource": [
+              "arn:aws:ecr:*:*:repository/cdk-*"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "ssm:GetParameter*",
+              "ssm:PutParameter*",
+              "ssm:DeleteParameter*"
+          ],
+          "Resource": "arn:aws:ssm:*:*:parameter/cdk-bootstrap/*"
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "iam:PassRole"
+          ],
+          "Resource": "*"
+      }
   ]
 }

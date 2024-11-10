@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/projectzomboid/auto_shutdown.sh > /home/projectzomboid/auto_shutdown.log 2>&1

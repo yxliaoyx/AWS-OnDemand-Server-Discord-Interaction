@@ -1,0 +1,9 @@
+[Unit]
+BindsTo=projectzomboid.service
+
+[Socket]
+ListenFIFO=/home/projectzomboid/projectzomboid.control
+FileDescriptorName=control
+RemoveOnStop=true
+SocketMode=0660
+SocketUser=projectzomboid

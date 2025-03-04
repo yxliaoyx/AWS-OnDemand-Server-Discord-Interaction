@@ -13,8 +13,8 @@ def main():
     ]
 
     response = requests.put(
-        f"https://discord.com/api/v10/applications/{config.get("DISCORD", "APPLICATION_ID")}/commands",
-        headers={"Authorization": f"Bot {config.get("DISCORD", "BOT_TOKEN")}"},
+        f"https://discord.com/api/v10/applications/{config.get('DISCORD', 'APPLICATION_ID')}/commands",
+        headers={"Authorization": f"Bot {config.get('DISCORD', 'BOT_TOKEN')}"},
         json=slash_commands,
         timeout=30,
     )

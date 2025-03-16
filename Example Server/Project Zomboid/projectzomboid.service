@@ -4,11 +4,11 @@ After=network.target
 
 [Service]
 User=projectzomboid
-WorkingDirectory=/home/projectzomboid/
 ExecStartPre=/usr/games/steamcmd +force_install_dir /home/projectzomboid/ +login anonymous +app_update 380870 validate +quit
 ExecStart=/bin/sh -c "exec /home/projectzomboid/start-server.sh -Xms2048m -Xmx2048m -- -servername MySecondServer -adminpassword YourPasswdXYZ </home/projectzomboid/projectzomboid.control"
 ExecStop=/bin/sh -c "echo save > /home/projectzomboid/projectzomboid.control; sleep 15; echo quit > /home/projectzomboid/projectzomboid.control"
 Sockets=projectzomboid.socket
+TimeoutStartSec=0
 KillSignal=SIGCONT
 
 [Install]

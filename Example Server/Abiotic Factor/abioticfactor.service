@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 User=abioticfactor
-WorkingDirectory=/home/abioticfactor/AbioticFactor/Binaries/Win64/
 ExecStartPre=/usr/games/steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /home/abioticfactor/ +login anonymous +app_update 2857200 validate +quit
 ExecStart=/bin/bash /home/abioticfactor/start_server.sh
+TimeoutStartSec=0
 
 [Install]
 WantedBy=multi-user.target

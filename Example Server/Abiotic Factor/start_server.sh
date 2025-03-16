@@ -1,1 +1,1 @@
-wine AbioticFactorServer-Win64-Shipping.exe -log -newconsole -useperfthreads -NoAsyncLoadingThread -MaxServerPlayers=6 -Port=7777 -QueryPort=27015 -ServerPassword=YourServerPassword -SteamServerName="YourServerName" -WorldSaveName="YourWorldName"
+wine /home/abioticfactor/AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64-Shipping.exe -log -newconsole -useperfthreads -NoAsyncLoadingThread -MaxServerPlayers=6 -Port=7777 -QueryPort=27015 -ServerPassword=YourServerPassword -SteamServerName="YourServerName" -WorldSaveName="YourWorldName"

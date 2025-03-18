@@ -5,7 +5,7 @@ if [[ -n $established_ssh ]]; then
 fi
 
 
-tcpdump_output=$(timeout 600 tcpdump -c 10 port 27015 2>/dev/null)
+tcpdump_output=$(timeout 600 tcpdump -c 1 port 27015 2>/dev/null)
 
 if [[ -z $tcpdump_output ]]; then
     systemctl stop corekeeper.service

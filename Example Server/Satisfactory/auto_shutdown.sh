@@ -1,12 +1,13 @@
-tcpdump_output=$(timeout 600 tcpdump -c 1 port 7777 2>/dev/null)
+established_ssh=$(ss --no-header state established '( dport = :ssh or sport = :ssh )')
 
-if [[ -n $tcpdump_output ]]; then
+if [[ -n $established_ssh ]]; then
     exit 0
 fi
 
-established_ssh=$(ss --no-header state established '( dport = :ssh or sport = :ssh )')
 
-if [[ -z $established_ssh ]]; then
+tcpdump_output=$(timeout 600 tcpdump -c 1 port 7777 2>/dev/null)
+
+if [[ -z $tcpdump_output ]]; then
     systemctl stop satisfactory.service
     shutdown now
 fi

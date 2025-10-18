@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=necesse
 ExecStartPre=/usr/games/steamcmd +force_install_dir /home/necesse/ +login anonymous +app_update 1169370 validate +quit
-ExecStart=/home/necesse/Steam/steamapps/common/Necesse Dedicated Server/Server/StartServer-nogui.sh -world YourWorldName
+ExecStart=/home/necesse/StartServer-nogui.sh -world YourWorldName
 TimeoutStartSec=0
 KillMode=process
 

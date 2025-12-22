@@ -1,0 +1,13 @@
+[Unit]
+Description=Necesse Server
+After=network.target
+
+[Service]
+User=necesse
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/necesse/ +login anonymous +app_update 1169370 validate +quit
+ExecStart=/home/necesse/StartServer-nogui.sh -world YourWorldName
+TimeoutStartSec=0
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

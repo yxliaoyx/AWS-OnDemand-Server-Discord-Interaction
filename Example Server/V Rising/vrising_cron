@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/vrising/auto_shutdown.sh > /home/vrising/auto_shutdown.log 2>&1

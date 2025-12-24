@@ -5,7 +5,7 @@ echo steam steam/question select 'I AGREE' | debconf-set-selections
 add-apt-repository -y multiverse
 dpkg --add-architecture i386
 apt update
-NEEDRESTART_MODE=a apt install -y steamcmd wine
+NEEDRESTART_MODE=a apt install -y steamcmd wine xvfb
 apt clean
 
 useradd --create-home vrising

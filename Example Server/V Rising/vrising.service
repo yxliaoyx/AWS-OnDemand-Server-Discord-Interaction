@@ -1,0 +1,14 @@
+[Unit]
+Description=V Rising Server
+After=network.target
+
+[Service]
+User=vrising
+WorkingDirectory=/home/vrising
+ExecStartPre=/usr/games/steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /home/vrising/ +login anonymous +app_update 1829350 validate +quit
+ExecStart=/bin/bash /home/vrising/start_server.sh
+TimeoutStartSec=0
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

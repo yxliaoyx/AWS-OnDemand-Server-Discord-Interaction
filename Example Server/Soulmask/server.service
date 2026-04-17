@@ -1,0 +1,15 @@
+[Unit]
+Description=Soulmask Server
+After=network-online.target
+
+[Service]
+User=server
+WorkingDirectory=/home/server
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/server/ +login anonymous +app_update 3017300 +quit
+ExecStart=/home/server/WSServer.sh DLC_Level01_Main -server -log -forcepassthrough -UTF8Output -SteamServerName='SERVERNAME' -MaxPlayers=10 -PSW='PASSWORD' -adminpsw='ADMINPASSWORD' -MULTIHOME=0.0.0.0 -Port=8777 -QueryPort=27015 -EchoPort=18888
+ExecStop=-/bin/bash -c "echo 'close 1' | /usr/bin/telnet 127.0.0.1 18888"
+TimeoutStartSec=0
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

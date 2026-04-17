@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /home/server/auto_shutdown.sh > /home/server/auto_shutdown.log 2>&1

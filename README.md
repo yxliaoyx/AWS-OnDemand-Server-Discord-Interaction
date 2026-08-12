@@ -1,3 +1,5 @@
+
+
 # AWS-OnDemand-Server-Discord-Interaction
 
 ![AWS-OnDemand-Server-Discord-Interaction](/docs/AWS-OnDemand-Server-Discord-Interaction.png)
@@ -52,7 +54,7 @@ If haven't, here are some [Guides & Tips for Launching an AWS EC2 Instance for Y
     * `STACK_NAME`: CloudFormation Stack name
     * `APPLICATION_ID` and `APPLICATION_PUBLIC_KEY` can be found in the `General Information` tab of
       your [Discord Application](https://discord.com/developers/applications)
-    * `DISCORD_BOT_TOKEN` can be found in the `Bot` tab. If you can't view the token, click `Reset Token` to generate
+    * `BOT_TOKEN` can be found in the `Bot` tab. If you can't view the token, click `Reset Token` to generate
       one.
 
    Example `config.ini` format:

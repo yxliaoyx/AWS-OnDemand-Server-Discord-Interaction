@@ -1,0 +1,16 @@
+﻿[Unit]
+Description=Valheim Dedicated Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=valheim
+WorkingDirectory=/home/valheim
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/valheim/ +login anonymous +app_update 896660 validate +quit
+ExecStart=/home/valheim/valheim_server.x86_64 -nographics -batchmode -name "YourWorldName" -port 2456 -world "YourWorldFilename" -password "YourPassword" -public 0 -saveinterval 900
+TimeoutStartSec=0
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
